@@ -1,5 +1,3 @@
-require "ruby_event_store_event_id_mapper/version"
-
-module RubyEventStoreEventIdMapper
-  # Your code goes here...
-end
+require 'ruby_event_store_event_id_mapper/version'
+require 'ruby_event_store_event_id_mapper/repository_wrapper'
+require 'ruby_event_store_event_id_mapper/binary_uuid_serializer'
