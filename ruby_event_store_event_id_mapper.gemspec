@@ -6,12 +6,12 @@ require "ruby_event_store_event_id_mapper/version"
 Gem::Specification.new do |spec|
   spec.name          = "ruby_event_store_event_id_mapper"
   spec.version       = RubyEventStoreEventIdMapper::VERSION
-  spec.authors       = ["TODO: Write your name"]
-  spec.email         = ["TODO: Write your email address"]
+  spec.authors       = ["Sarun Rattanasiri"]
+  spec.email         = ["midnight_w@gmx.tw"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{Event repository wrapper for Ruby Event Store}
+  spec.description   = %q{Thin wrapper for Ruby Event Store for event_id mapping}
+  spec.homepage      = "http://example.com/todo/add-repository-url"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
