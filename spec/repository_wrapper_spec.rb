@@ -2,12 +2,6 @@ require 'ruby_event_store'
 require 'ruby_event_store/spec/event_repository_lint'
 require 'rails_event_store_active_record'
 
-RSpec.describe RubyEventStoreEventIdMapper do
-  it "has a version number" do
-    expect(RubyEventStoreEventIdMapper::VERSION).not_to be nil
-  end
-end
-
 module RubyEventStoreEventIdMapper
   RSpec.describe RepositoryWrapper do
     include SchemaHelper
