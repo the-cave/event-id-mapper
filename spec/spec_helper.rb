@@ -12,7 +12,7 @@ module SchemaHelper
   end
 
   def load_database_schema
-    migration_class = Class.new(ActiveRecord::Migration[
+    migration_class = Class.new(::ActiveRecord::Migration[
       "#{::ActiveRecord::VERSION::MAJOR}.#{::ActiveRecord::VERSION::MINOR}"
     ]) do
       def change
@@ -26,7 +26,7 @@ module SchemaHelper
         add_index :event_store_events_in_streams, [:stream, :event_id], unique: true
 
         create_table(:event_store_events, id: false, force: false) do |t|
-          t.binary :id, limit: 16, index: {unique: true}, null: false
+          t.binary :id, limit: 16, index: { unique: true }, null: false
           t.string :event_type, null: false
           t.binary :data, limit: 64.kilobytes, null: false
           t.binary :metadata, limit: 64.kilobytes

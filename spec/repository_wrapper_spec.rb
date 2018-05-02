@@ -22,13 +22,15 @@ module RubyEventStoreEventIdMapper
       end
     end
 
-    let(:test_race_conditions_auto) {!ENV['DATABASE_URL'].include?('sqlite')}
-    let(:test_race_conditions_any) {!ENV['DATABASE_URL'].include?('sqlite')}
-    let(:test_binary) {true}
-    let(:test_expected_version_auto) {true}
-    let(:test_link_events_to_stream) {true}
-    let(:test_non_legacy_all_stream) {true}
-    let(:migrate_to_binary) {->() {nil}}
+    let(:test_race_conditions_auto) { !ENV['DATABASE_URL'].include?('sqlite') }
+    let(:test_race_conditions_any) { !ENV['DATABASE_URL'].include?('sqlite') }
+    let(:test_binary) { true }
+    let(:test_expected_version_auto) { true }
+    let(:test_link_events_to_stream) { true }
+    let(:test_non_legacy_all_stream) { true }
+
+    # https://github.com/RailsEventStore/rails_event_store/issues/329
+    let(:migrate_to_binary) { nil }
 
     subject do
       RepositoryWrapper.new(
