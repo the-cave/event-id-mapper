@@ -27,12 +27,24 @@ module RubyEventStoreEventIdMapper
     let(:migrate_to_binary) { nil }
 
     subject do
-      RepositoryWrapper.new(
+      described_class.new(
         repository: ::RailsEventStoreActiveRecord::EventRepository.new,
         serializer: BinaryUUIDSerializer,
       )
     end
 
     it_should_behave_like :event_repository
+
+    def cleanup_concurrency_test
+      ActiveRecord::Base.connection_pool.disconnect!
+    end
+
+    def verify_conncurency_assumptions
+      # we did not test underlying implementations here
+    end
+
+    def additional_limited_concurrency_for_auto_check
+      # we did not test underlying implementations here
+    end
   end
 end

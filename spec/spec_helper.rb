@@ -16,6 +16,13 @@ module SchemaHelper
       "#{::ActiveRecord::VERSION::MAJOR}.#{::ActiveRecord::VERSION::MINOR}"
     ]) do
       def change
+        create_table(:event_store_events, id: :binary, limit: 16, force: false) do |t|
+          t.string :event_type, null: false
+          t.binary :data, limit: 64.kilobytes, null: false
+          t.binary :metadata, limit: 64.kilobytes
+          t.datetime :created_at, index: true, null: false
+        end
+
         create_table(:event_store_events_in_streams, force: false) do |t|
           t.string :stream, null: false
           t.integer :position, null: true
@@ -24,14 +31,6 @@ module SchemaHelper
         end
         add_index :event_store_events_in_streams, [:stream, :position], unique: true
         add_index :event_store_events_in_streams, [:stream, :event_id], unique: true
-
-        create_table(:event_store_events, id: false, force: false) do |t|
-          t.binary :id, limit: 16, index: { unique: true }, null: false
-          t.string :event_type, null: false
-          t.binary :data, limit: 64.kilobytes, null: false
-          t.binary :metadata, limit: 64.kilobytes
-          t.datetime :created_at, index: true, null: false
-        end
       end
     end
     ::ActiveRecord::Schema.define do
