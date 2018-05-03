@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Sarun Rattanasiri"]
   spec.email         = ["midnight_w@gmx.tw"]
 
-  spec.summary       = %q{Event repository wrapper for Ruby Event Store}
-  spec.description   = %q{Thin wrapper for Ruby Event Store repository for the event_id mapping}
-  spec.homepage      = "https://github.com/the-cave/ruby-event-store-event-id-mapper"
+  spec.summary       = %q{Ruby Event Store repository wrapper for id serialization}
+  spec.description   = %q{A thin wrapper for Ruby Event Store repository implementations to serialize event_id with external serializers.}
+  spec.homepage      = "https://github.com/the-cave/event-id-mapper"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -26,18 +26,19 @@ Gem::Specification.new do |spec|
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
   end
-  spec.bindir        = "exe"
-  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
-  spec.require_paths = ["lib"]
+  spec.bindir                = "exe"
+  spec.executables           = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
+  spec.require_paths         = ["lib"]
+  spec.required_ruby_version = '> 2.1'
 
   spec.add_development_dependency 'bundler', '~> 1.16'
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'rspec', '~> 3.0'
-  spec.add_development_dependency 'rails'
-  spec.add_development_dependency 'rails_event_store_active_record'
-  spec.add_development_dependency 'sqlite3'
-  spec.add_development_dependency 'mysql2'
+  spec.add_development_dependency 'rails', ['> 4.0', '< 6.0']
+  spec.add_development_dependency 'rails_event_store_active_record', '~> 0.28.0'
+  spec.add_development_dependency 'sqlite3', '~> 1.3'
+  spec.add_development_dependency 'mysql2', '~> 0.5.1'
 
   spec.add_dependency 'ruby_event_store', '~> 0.28.0'
-  spec.add_dependency 'activesupport'
+  spec.add_dependency 'activesupport', '> 4.0'
 end

@@ -44,7 +44,7 @@ It is recommended that you verify the compatibility of your setup with
 [the test suite](https://github.com/RailsEventStore/rails_event_store/blob/master/ruby_event_store/lib/ruby_event_store/spec/event_repository_lint.rb)
 provided by Ruby Event Store.  
 It is also recommended to see
-[how this tiny gem actually works](https://github.com/the-cave/ruby-event-store-event-id-mapper/blob/master/lib/ruby_event_store_event_id_mapper/repository_wrapper.rb).
+[how this tiny gem actually works](https://github.com/the-cave/event-id-mapper/blob/master/lib/ruby_event_store_event_id_mapper/repository_wrapper.rb).
 
 ### for other uses
 It is possible that you have a better use case for the mapper but for now, I can't think of any concrete one.
@@ -55,7 +55,7 @@ It is possible that you have a better use case for the mapper but for now, I can
 
 ## Contributing
 
-Bug reports, pull requests, and inquiries are welcome on [the GitHub repository](https://github.com/the-cave/ruby-event-store-event-id-mapper).
+Bug reports, pull requests, and inquiries are welcome on [the GitHub repository](https://github.com/the-cave/event-id-mapper).
 
 ## License
 

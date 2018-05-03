@@ -1,8 +1,8 @@
 PATH
   remote: .
   specs:
-    ruby_event_store_event_id_mapper (0.1.0)
-      activesupport
+    ruby_event_store_event_id_mapper (0.28.1)
+      activesupport (> 4.0)
       ruby_event_store (~> 0.28.0)
 
 GEM
@@ -146,13 +146,13 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1.16)
-  mysql2
-  rails
-  rails_event_store_active_record
+  mysql2 (~> 0.5.1)
+  rails (> 4.0, < 6.0)
+  rails_event_store_active_record (~> 0.28.0)
   rake (~> 10.0)
   rspec (~> 3.0)
   ruby_event_store_event_id_mapper!
-  sqlite3
+  sqlite3 (~> 1.3)
 
 BUNDLED WITH
    1.16.1
