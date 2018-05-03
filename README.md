@@ -52,6 +52,7 @@ It is possible that you have a better use case for the mapper but for now, I can
 ## Code status
 
 [![Build Status](https://semaphoreci.com/api/v1/midnight-wonderer/event-id-mapper/branches/master/shields_badge.svg)](https://semaphoreci.com/midnight-wonderer/event-id-mapper)
+[![Gem Version](https://badge.fury.io/rb/ruby_event_store_event_id_mapper.svg)](https://badge.fury.io/rb/ruby_event_store_event_id_mapper)
 
 ## Contributing
 
