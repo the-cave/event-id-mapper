@@ -3,7 +3,7 @@ PATH
   specs:
     ruby_event_store_event_id_mapper (0.1.0)
       activesupport
-      ruby_event_store
+      ruby_event_store (~> 0.28.0)
 
 GEM
   remote: https://rubygems.org/
@@ -147,8 +147,8 @@ PLATFORMS
 DEPENDENCIES
   bundler (~> 1.16)
   mysql2
-  rails (~> 5.2)
-  rails_event_store_active_record (~> 0.28.0)
+  rails
+  rails_event_store_active_record
   rake (~> 10.0)
   rspec (~> 3.0)
   ruby_event_store_event_id_mapper!
