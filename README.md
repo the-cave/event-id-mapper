@@ -4,6 +4,16 @@ Event ID Mapper is a plug-in for [Rails Event Store (RES)](https://railseventsto
 Its original purpose is to encode the primary key and the foreign key in binary format for MySQL compatible databases. Leveraging on [ActiveRecord repository](https://github.com/RailsEventStore/rails_event_store/tree/master/rails_event_store_active_record) for the underlying repository implementation.  
 However, since the mapper is generic you can easily use it with any Ruby Event Store repository implementations.
 
+## Installation
+Add `ruby_event_store_event_id_mapper` to the Gemfile:
+```ruby
+gem 'ruby_event_store_event_id_mapper'
+```
+Download and install by running:
+```bash
+bundle install
+```
+
 ## Basic usage
 
 ### for ActiveRecord repository and MySQL
@@ -40,7 +50,7 @@ event_store = RailsEventStore::Client.new(
 )
 
 ```
-It is recommended that you verify the compatibility of your setup with
+It is recommended to verify the compatibility of your setup with
 [the test suite](https://github.com/RailsEventStore/rails_event_store/blob/master/ruby_event_store/lib/ruby_event_store/spec/event_repository_lint.rb)
 provided by Ruby Event Store.  
 It is also recommended to see
@@ -52,6 +62,7 @@ It is possible that you have a better use case for the mapper but for now, I can
 ## Code status
 
 [![Build Status](https://semaphoreci.com/api/v1/midnight-wonderer/event-id-mapper/branches/master/shields_badge.svg)](https://semaphoreci.com/midnight-wonderer/event-id-mapper)
+[![Gem Version](https://badge.fury.io/rb/ruby_event_store_event_id_mapper.svg)](https://badge.fury.io/rb/ruby_event_store_event_id_mapper)
 
 ## Contributing
 
