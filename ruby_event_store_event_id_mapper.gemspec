@@ -36,7 +36,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rspec', '~> 3.0'
   spec.add_development_dependency 'rails', ['> 4.0', '< 6.0']
   spec.add_development_dependency 'rails_event_store_active_record', '~> 0.28.0'
-  spec.add_development_dependency 'sqlite3', '~> 1.3'
+  spec.add_development_dependency 'sqlite3', ['~> 1.3', '< 1.4']
   spec.add_development_dependency 'mysql2', '~> 0.5.1'
 
   spec.add_dependency 'ruby_event_store', '~> 0.28.0'
